@@ -77,7 +77,7 @@ data_paths = './data.json'
 # JSON 파일 구조 확인
 documents = []  # documents 변수를 빈 리스트로 초기화
 try:
-    with open(data_paths[0], 'r', encoding='utf-8') as f:
+    with open(data_paths, 'r', encoding='utf-8') as f:
         raw_docs = json.load(f)
     
     documents = [process_json_document(doc) for doc in raw_docs]
