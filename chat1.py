@@ -72,9 +72,7 @@ def process_json_document(doc):
 
 
 # 데이터 파일 경로 설정
-data_paths = [
-    os.path.join(parent_dir, 'back', 'data.json')
-]
+data_paths = './data.json'
 
 # JSON 파일 구조 확인
 documents = []  # documents 변수를 빈 리스트로 초기화
@@ -114,7 +112,7 @@ if not splits:
 
 
 # 벡터 저장소 생성/로드 로직 수정
-cache_dir = os.path.join(parent_dir, 'back', 'vector_cache')
+cache_dir = './vector_cache'
 cache_file = os.path.join(cache_dir, 'index.faiss')
 
 if os.path.exists(cache_file):
