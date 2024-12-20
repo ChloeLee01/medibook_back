@@ -35,17 +35,17 @@ app.post("/chat1", (request, response) => {
     const { question } = request.body;
     // console.log(question);
 
-    // const scriptPath = path.join(__dirname, "chat1.py");
-    // const phythonPath = "python";
     const scriptPath = path.join(__dirname, "chat1.py");
-    console.log(scriptPath);
-    const phythonPath = path.join(
-      "/home/ubuntu/miniconda",
-      "envs",
-      "myenv",
-      "bin",
-      "python3"
-    );
+    const phythonPath = "python";
+    // const scriptPath = path.join(__dirname, "chat1.py");
+    // console.log(scriptPath);
+    // const phythonPath = path.join(
+    //   "/home/ubuntu/miniconda",
+    //   "envs",
+    //   "myenv",
+    //   "bin",
+    //   "python3"
+    // );
     console.log(phythonPath);
 
     const result = spawn(phythonPath, [scriptPath, question]);
