@@ -135,17 +135,17 @@ else:
     )
     os.makedirs(cache_dir, exist_ok=True)
     vectorstore.save_local(cache_dir)
-    print(f"새로운 벡터 저장소 생성 완료: {time.time() - create_start:.2f}초")
+    # print(f"새로운 벡터 저장소 생성 완료: {time.time() - create_start:.2f}초")
 
 # print(f"벡터 저장소 생성 완료: {time.time() - vector_start:.2f}초")
 
 
 # 벡터 저장소 크기 확인
-try:
-    vector_count = vectorstore.index.ntotal
-    print(f"벡터 저장소에 저장된 벡터 수: {vector_count}")
-except:
-    print(f"벡터 저장소 크기를 확인할 수 없습니다.")
+# try:
+#     vector_count = vectorstore.index.ntotal
+#     print(f"벡터 저장소에 저장된 벡터 수: {vector_count}")
+# except:
+#     print(f"벡터 저장소 크기를 확인할 수 없습니다.")
 
 
 retriever = vectorstore.as_retriever(
