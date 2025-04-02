@@ -1,5 +1,5 @@
 const database = require("../database/database");
-
+// 1
 exports.deleteAuth = async (request, response) => {
   const userID = request.params.id;
 
